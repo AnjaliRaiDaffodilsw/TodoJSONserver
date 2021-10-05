@@ -7,7 +7,6 @@ import {
 } from '../redux/actions/todoActions';
 
 export function addData(dataObj) {
-  console.log(dataObj)
   return dispatch => {
     dispatch(addTodoDataRequest());
     axios.post('http://localhost:3000/posts/', dataObj)

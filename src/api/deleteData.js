@@ -7,7 +7,6 @@ import {
 } from '../redux/actions/todoActions';
 
 export function deleteData(id) {
-  console.log('hii',id);
   return dispatch => {
     dispatch(deleteTodoRequest());
     axios.delete(`http://localhost:3000/posts/${id}`)

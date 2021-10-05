@@ -6,14 +6,14 @@ import {
   updateTodoDataFailure
 } from '../redux/actions/todoActions';
 
-export function updateData(id,dataObj) {
+export function updateData(dataObj,id) {
   console.log(dataObj);
   return dispatch => {
     dispatch(updateTodoDataRequest());
-    axios.put(`http://localhost:3000/posts/${id}`,dataObj)
+    axios.patch(`http://localhost:3000/posts/${id}`, dataObj)
       .then(() => {
-        dispatch(updateTodoDataSuccess());
-      })
+      dispatch(updateTodoDataSuccess());
+    })
       .catch(error => {
         dispatch(updateTodoDataFailure(error));
       });

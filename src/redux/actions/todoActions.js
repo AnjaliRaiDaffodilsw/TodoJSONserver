@@ -106,7 +106,7 @@ export const updateTodoDataRequest = () => {
   };
 };
 
-export const updateTodoDataSuccess = (item) => {
+export const updateTodoDataSuccess = () => {
   return {
     type: UPDATE_TODO_SUCCESS,
     payload: {

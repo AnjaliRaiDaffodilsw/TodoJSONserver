@@ -26,10 +26,11 @@ class Todo extends Component {
     this.props.fetchData();
   }
 
-  // handleEdit = (value, id) => {
-  //   this.props.updateData(id,{ title: value });
-  //   // this.props.fetchData();
-  // }
+  handleEdit = (value, id) => {
+    this.props.updateData({ title: value }, id);
+    this.props.fetchData();
+  }
+
   render() {
     return (
       <div>
@@ -40,7 +41,7 @@ class Todo extends Component {
         <TodoList
           todoList={this.props.items}
           onDelete={this.handleDelete}
-          // onEdit={this.handleEdit}
+          onEdit={this.handleEdit}
         />
       </div>
     )
