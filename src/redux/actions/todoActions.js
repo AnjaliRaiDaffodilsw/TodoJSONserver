@@ -1,7 +1,4 @@
 import {
-  FETCH_DATAWITHID_REQUEST,
-  FETCH_DATAWITHID_SUCCESS,
-  FETCH_DATAWITHID_FAILURE,
   UPDATE_TODO_REQUEST,
   UPDATE_TODO_SUCCESS,
   UPDATE_TODO_FAILURE,
@@ -124,29 +121,3 @@ export const updateTodoDataFailure = error => {
   };
 };
 
-export const fetchDataWithIdRequest = () => {
-  return {
-    type: FETCH_DATAWITHID_REQUEST,
-    payload: {
-      isLoading: true
-    }
-  };
-};
-
-export const fetchDataWithIdSuccess = (item) => {
-  return {
-    type: FETCH_DATAWITHID_SUCCESS,
-    payload: {
-      item,
-    }
-  };
-};
-
-export const fetchDataWithIdFailure = error => {
-  return {
-    type: FETCH_DATAWITHID_FAILURE,
-    payload: {
-      error
-    }
-  };
-};

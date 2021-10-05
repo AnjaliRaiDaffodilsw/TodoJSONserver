@@ -9,7 +9,7 @@
       "id": 2
     },
     {
-      "title": "Play around in JS ",
+      "title": "Play around in JS",
       "id": 3
     },
     {
@@ -17,8 +17,12 @@
       "id": 4
     },
     {
-      "title": "add css",
+      "title": "add Java",
       "id": 5
+    },
+    {
+      "title": "learn CSS",
+      "id": 6
     }
   ]
 }

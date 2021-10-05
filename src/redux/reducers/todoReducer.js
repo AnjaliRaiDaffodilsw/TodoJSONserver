@@ -1,7 +1,4 @@
 import {
-  FETCH_DATAWITHID_REQUEST,
-  FETCH_DATAWITHID_SUCCESS,
-  FETCH_DATAWITHID_FAILURE,
   UPDATE_TODO_REQUEST,
   UPDATE_TODO_SUCCESS,
   UPDATE_TODO_FAILURE,
@@ -100,23 +97,6 @@ export const todoList = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.payload.error
-      }
-    }
-    case FETCH_DATAWITHID_REQUEST:
-      return {
-        ...state,
-        loading: true
-      };
-    case FETCH_DATAWITHID_SUCCESS:
-      return {
-        ...state,
-        loading: false,
-        error: action.payload.error
-      };
-    case FETCH_DATAWITHID_FAILURE: {
-      return {
-        ...state,
-        loading: true,
       }
     }
     default: return state;

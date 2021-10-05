@@ -8,7 +8,6 @@ import TodoListHeader from './TodoListHeader';
 import addData from '../api/addData';
 import deleteData from '../api/deleteData';
 import updateData from '../api/updateData';
-import fetchDataWithId from '../api/fetchDataWithId';
 
 class Todo extends Component {
 
@@ -54,4 +53,9 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchData, addData, deleteData, updateData, fetchDataWithId })(Todo);
+export default connect(mapStateToProps, {
+  fetchData,
+  addData,
+  deleteData,
+  updateData
+})(Todo);
